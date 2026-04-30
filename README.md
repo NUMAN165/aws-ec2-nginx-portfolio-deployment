@@ -8,6 +8,10 @@ This was not just deployment — it was a **deep dive into Linux, networking, pe
 
 ---
 
+## http://52.203.70.114 Link of deployed Numans-Portfolio
+
+---
+
 ## 🧠 What I Learned
 
 * How AWS EC2 works (Virtual Machines, Public & Private IPs)
@@ -20,6 +24,8 @@ This was not just deployment — it was a **deep dive into Linux, networking, pe
 * Real-world problem solving (403 error, path issues)
 
 ---
+
+
 
 ## 🏗️ Architecture
 
@@ -44,7 +50,7 @@ User Browser → Internet → AWS EC2 → Nginx → Static Files
 ### 2. Connect via SSH
 
 ```bash
-ssh -i key.pem ubuntu@<PUBLIC_IP>
+ssh -i /Users/numan/Downloads/numan-cloud.pem ubuntu@52.203.70.114
 ```
 
 ---
@@ -52,7 +58,7 @@ ssh -i key.pem ubuntu@<PUBLIC_IP>
 ### 3. Upload Files using SCP (FROM LOCAL MACHINE)
 
 ```bash
-scp -i key.pem -r ./* ubuntu@<PUBLIC_IP>:/home/ubuntu/portfolio-files/
+scp -i /Users/numan/Downloads/numan-cloud.pem -r /Users/numan/numan/projects/web/Numan-Portfolio/* ubuntu@52.203.70.114:/home/ubuntu/
 ```
 
 ---
